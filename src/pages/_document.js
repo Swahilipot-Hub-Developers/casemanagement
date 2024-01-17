@@ -5,8 +5,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <script async src="assets/js/darktheme.js"></script>
-        <link rel="shortcut icon" href="assets/images/favicon.ico" />
+        <script async src="/assets/js/darktheme.js"></script>
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" />
         {/* Google Font */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -22,25 +22,25 @@ export default function Document() {
         <link
           rel="stylesheet"
           type="text/css"
-          href="assets/vendor/font-awesome/css/all.min.css"
+          href="/assets/vendor/font-awesome/css/all.min.css"
         />
         <link
           rel="stylesheet"
           type="text/css"
-          href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+          href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
         />
         <link
           rel="stylesheet"
           type="text/css"
-          href="assets/vendor/tiny-slider/tiny-slider.css"
+          href="/assets/vendor/tiny-slider/tiny-slider.css"
         />
         <link
           rel="stylesheet"
           type="text/css"
-          href="assets/vendor/glightbox/css/glightbox.css"
+          href="/assets/vendor/glightbox/css/glightbox.css"
         />
         {/* Theme CSS */}
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
       </Head>
       <body>
         <Main />
@@ -48,11 +48,11 @@ export default function Document() {
 
         <script
           async
-          src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"
+          src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"
         ></script>
-        <script async src="assets/vendor/tiny-slider/tiny-slider.js"></script>
-        <script async src="assets/vendor/glightbox/js/glightbox.js"></script>
-        <script async src="assets/js/functions.js"></script>
+        <script async src="/assets/vendor/tiny-slider/tiny-slider.js"></script>
+        <script async src="/assets/vendor/glightbox/js/glightbox.js"></script>
+        <script async src="/assets/js/functions.js"></script>
       </body>
     </Html>
   );

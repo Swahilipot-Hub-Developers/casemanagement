@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
 
 const Banner = () => {
   return (
@@ -9,7 +8,7 @@ const Banner = () => {
           className="bg-blue h-100px h-md-200px rounded-0"
           style={{
             background:
-              "url(assets/images/pattern/04.png) no-repeat center center",
+              "url(/assets/images/pattern/04.png) no-repeat center center",
             backgroundSize: "cover",
           }}
         ></div>
@@ -25,7 +24,7 @@ const Banner = () => {
                   <div className="avatar avatar-xxl mt-n3">
                     <img
                       className="avatar-img rounded-circle border border-white border-3 shadow"
-                      src="assets/images/avatar/01.jpg"
+                      src="/assets/images/avatar/01.jpg"
                       alt=""
                     />
                   </div>
@@ -34,7 +33,7 @@ const Banner = () => {
                 <div className="col d-md-flex justify-content-between align-items-center mt-4">
                   <div>
                     <h1 className="my-1 fs-4">
-                      Lori Stevens
+                      Mentor Dashboard
                       <i className="bi bi-patch-check-fill text-info small"></i>
                     </h1>
                     <ul className="list-inline mb-0">
