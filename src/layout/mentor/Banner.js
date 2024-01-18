@@ -38,15 +38,11 @@ const Banner = () => {
                     </h1>
                     <ul className="list-inline mb-0">
                       <li className="list-inline-item h6 fw-light me-3 mb-1 mb-sm-0">
-                        <i className="fas fa-star text-warning me-2"></i>4.5/5.0
-                      </li>
-                      <li className="list-inline-item h6 fw-light me-3 mb-1 mb-sm-0">
                         <i className="fas fa-user-graduate text-orange me-2"></i>
-                        12k Enrolled Students
+                        12 Enrolled Mentees
                       </li>
                       <li className="list-inline-item h6 fw-light me-3 mb-1 mb-sm-0">
-                        <i className="fas fa-book text-purple me-2"></i>25
-                        Courses
+                        <i className="fas fa-book text-purple me-2"></i>2 Cases
                       </li>
                     </ul>
                   </div>
@@ -56,7 +52,7 @@ const Banner = () => {
                       href="instructor-create-course.html"
                       className="btn btn-success mb-0"
                     >
-                      Create a course
+                      Create a Case
                     </a>
                   </div>
                 </div>
