@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 const PasswordReset = () => {
   const [email, setEmail] = useState("");
@@ -8,7 +8,7 @@ const PasswordReset = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitted with email:", email);
-    router.push('/change-password')
+    router.push("/change-password");
   };
 
   return (
@@ -17,11 +17,13 @@ const PasswordReset = () => {
         <div className="card">
           <div className="card-body">
             <p className="text-muted">
-              Enter the email used to register your Fursa Account to receive the
-              OTP code for resetting password.
+              Enter the email used to register Fursa Account to resetting
+              password.
             </p>
             <form onSubmit={handleSubmit}>
-              <label className="form-label" htmlFor="email">Email Address</label>
+              <label className="form-label" htmlFor="email">
+                Email Address
+              </label>
               <input
                 className="form-control"
                 id="email"

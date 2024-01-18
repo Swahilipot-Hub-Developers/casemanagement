@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -48,12 +49,12 @@ const Banner = () => {
                   </div>
                   {/* Button */}
                   <div className="d-flex align-items-center mt-2 mt-md-0">
-                    <a
-                      href="instructor-create-course.html"
+                    <Link
+                      href="/mentor/cases/create"
                       className="btn btn-success mb-0"
                     >
                       Create a Case
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
