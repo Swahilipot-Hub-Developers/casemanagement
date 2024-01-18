@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="pt-5">
@@ -8,22 +10,19 @@ const Footer = () => {
           {/* Widget 1 START */}
           <div className="col-md-5 col-lg-4">
             {/* logo */}
-            <a className="me-0" href="index.html">
+            <Link className="me-0" href="/">
               <img
                 className="light-mode-item h-40px"
-                src="logo.png"
+                src="/logo.png"
                 alt="logo"
               />
               <img
                 className="dark-mode-item h-40px"
-                src="logo.png"
+                src="/logo.png"
                 alt="logo"
               />
-            </a>
-            <p className="my-3">
-              Eduport education theme, built specifically for the education
-              centers which is dedicated to teaching and involve learners.
-            </p>
+            </Link>
+            <p className="my-3">CaseManagement is about bla bla</p>
             {/* Newsletter */}
             <form className="row row-cols-lg-auto g-2">
               <div className="col-12">
@@ -50,54 +49,24 @@ const Footer = () => {
                 <ul className="nav flex-column">
                   <li className="nav-item">
                     <a className="nav-link" href="#">
-                      About us
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      Contact us
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      News and Blogs
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      Library
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      Career
+                      About Swahilipot
                     </a>
                   </li>
                 </ul>
               </div>
               {/* Link block */}
               <div className="col-6 col-sm-4">
-                <h5 className="mb-2 mb-md-3">Teaching</h5>
+                <h5 className="mb-2 mb-md-3">Mentoring</h5>
                 <ul className="nav flex-column">
                   <li className="nav-item">
-                    <a className="nav-link pt-0" href="#">
-                      Become instructor
-                    </a>
+                    <Link className="nav-link pt-0" href="/mentor/register">
+                      Become a Mentor
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      Download
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      Pricing
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      Services
-                    </a>
+                    <Link className="nav-link" href="/mentor/registe">
+                      Become a Mente
+                    </Link>
                   </li>
                 </ul>
               </div>

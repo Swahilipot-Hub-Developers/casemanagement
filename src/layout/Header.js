@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 const Header = () => {
   return (
     <header className="navbar-light navbar-sticky">
@@ -6,18 +7,18 @@ const Header = () => {
       <nav className="navbar navbar-expand-xl">
         <div className="container">
           {/* Logo START */}
-          <a className="navbar-brand" href="index.html">
+          <Link className="navbar-brand" href="/">
             <img
               className="light-mode-item navbar-brand-item"
-              src="logo.png"
+              src="/logo.png"
               alt="logo"
             />
             <img
               className="dark-mode-item navbar-brand-item"
-              src="logo.png"
+              src="/logo.png"
               alt="logo"
             />
-          </a>
+          </Link>
           {/* Logo END */}
           {/* Responsive navbar toggler */}
           <button
@@ -37,122 +38,12 @@ const Header = () => {
           </button>
           {/* Main navbar START */}
           <div className="navbar-collapse collapse" id="navbarCollapse">
-            {/* Nav Search START */}
-            <div className="col-xl-7">
-              <div className="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
-                <div className="nav-item w-100">
-                  <form className="rounded position-relative">
-                    <input
-                      className="form-control pe-5 bg-secondary bg-opacity-10 border-0"
-                      type="search"
-                      placeholder="Search"
-                      aria-label="Search"
-                    />
-                    <button
-                      className="btn btn-link bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y"
-                      type="submit"
-                    >
-                      <i className="fas fa-search fs-6 text-primary" />
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-            {/* Nav Search END */}
             {/* Nav Main menu START */}
             <ul className="navbar-nav navbar-nav-scroll ms-auto">
-              {/* Nav item 1 Demos */}
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle active"
-                  href="#"
-                  id="demoMenu"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Demos
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="demoMenu">
-                  <li>
-                    {" "}
-                    <a className="dropdown-item" href="index.html">
-                      Home Default
-                    </a>
-                  </li>
-                  <li>
-                    {" "}
-                    <a className="dropdown-item" href="index-2.html">
-                      Home Education
-                    </a>
-                  </li>
-                  <li>
-                    {" "}
-                    <a className="dropdown-item" href="index-3.html">
-                      Home Academy
-                    </a>
-                  </li>
-                  <li>
-                    {" "}
-                    <a className="dropdown-item" href="index-4.html">
-                      Home Course
-                    </a>
-                  </li>
-                  <li>
-                    {" "}
-                    <a className="dropdown-item" href="index-5.html">
-                      Home University
-                    </a>
-                  </li>
-                  <li>
-                    {" "}
-                    <a className="dropdown-item" href="index-6.html">
-                      Home Kindergarten
-                    </a>
-                  </li>
-                  <li>
-                    {" "}
-                    <a className="dropdown-item" href="index-7.html">
-                      Home Landing
-                    </a>
-                  </li>
-                  <li>
-                    {" "}
-                    <a className="dropdown-item" href="index-8.html">
-                      Home Tutor
-                    </a>
-                  </li>
-                  <li>
-                    {" "}
-                    <a className="dropdown-item" href="index-9.html">
-                      Home School
-                    </a>
-                  </li>
-                  <li></li>
-                  <li>
-                    {" "}
-                    <a className="dropdown-item" href="index-10.html">
-                      Home Abroad
-                    </a>
-                  </li>
-                  <li>
-                    {" "}
-                    <a className="dropdown-item active" href="index-11.html">
-                      Home Workshop
-                    </a>
-                  </li>
-                </ul>
-              </li>
               {/* Nav item 2 Course */}
               <li className="nav-item dropdown">
                 <a className="nav-link" href="course-grid.html">
-                  Courses
-                </a>
-              </li>
-              {/* Nav item 3 Components */}
-              <li className="nav-item">
-                <a className="nav-link" href="docs/alerts.html">
-                  Components
+                  Our Mentors
                 </a>
               </li>
             </ul>
@@ -161,149 +52,7 @@ const Header = () => {
           {/* Main navbar END */}
           {/* Profile and notification START */}
           <ul className="nav flex-row align-items-center list-unstyled ms-xl-auto">
-            {/* Notification dropdown START */}
-            <li className="nav-item ms-0 ms-md-3 dropdown">
-              {/* Notification button */}
-              <a
-                className="btn btn-light btn-round mb-0"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                data-bs-auto-close="outside"
-              >
-                <i className="bi bi-bell fa-fw" />
-              </a>
-              {/* Notification dote */}
-              <span className="notif-badge animation-blink" />
-              {/* Notification dropdown menu START */}
-              <div className="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md p-0 shadow-lg border-0">
-                <div className="card bg-transparent">
-                  <div className="card-header bg-transparent border-bottom py-4 d-flex justify-content-between align-items-center">
-                    <h6 className="m-0">
-                      Notifications{" "}
-                      <span className="badge bg-danger bg-opacity-10 text-danger ms-2">
-                        2 new
-                      </span>
-                    </h6>
-                    <a className="small" href="#">
-                      Clear all
-                    </a>
-                  </div>
-                  <div className="card-body p-0">
-                    <ul className="list-group list-unstyled list-group-flush">
-                      {/* Notif item */}
-                      <li>
-                        <a
-                          href="#"
-                          className="list-group-item-action border-0 border-bottom d-flex p-3"
-                        >
-                          <div className="me-3">
-                            <div className="avatar avatar-md">
-                              <img
-                                className="avatar-img rounded-circle"
-                                src="assets/images/avatar/08.jpg"
-                                alt="avatar"
-                              />
-                            </div>
-                          </div>
-                          <div>
-                            <p className="text-body small m-0">
-                              Congratulate <b>Joan Wallace</b> for graduating
-                              from <b>Microverse university</b>
-                            </p>
-                            <u className="small">Say congrats</u>
-                          </div>
-                        </a>
-                      </li>
-                      {/* Notif item */}
-                      <li>
-                        <a
-                          href="#"
-                          className="list-group-item-action border-0 border-bottom d-flex p-3"
-                        >
-                          <div className="me-3">
-                            <div className="avatar avatar-md">
-                              <img
-                                className="avatar-img rounded-circle"
-                                src="assets/images/avatar/02.jpg"
-                                alt="avatar"
-                              />
-                            </div>
-                          </div>
-                          <div>
-                            <h6 className="mb-1">
-                              Larry Lawson Added a new course
-                            </h6>
-                            <p className="small text-body m-0">
-                              Whats new! Find out about new features
-                            </p>
-                            <u className="small">View detail</u>
-                          </div>
-                        </a>
-                      </li>
-                      {/* Notif item */}
-                      <li>
-                        <a
-                          href="#"
-                          className="list-group-item-action border-0 border-bottom d-flex p-3"
-                        >
-                          <div className="me-3">
-                            <div className="avatar avatar-md">
-                              <img
-                                className="avatar-img rounded-circle"
-                                src="assets/images/avatar/05.jpg"
-                                alt="avatar"
-                              />
-                            </div>
-                          </div>
-                          <div>
-                            <h6 className="mb-1">
-                              New request to apply for Instructor
-                            </h6>
-                            <u className="small">View detail</u>
-                          </div>
-                        </a>
-                      </li>
-                      {/* Notif item */}
-                      <li>
-                        <a
-                          href="#"
-                          className="list-group-item-action border-0 border-bottom d-flex p-3"
-                        >
-                          <div className="me-3">
-                            <div className="avatar avatar-md">
-                              <img
-                                className="avatar-img rounded-circle"
-                                src="assets/images/avatar/03.jpg"
-                                alt="avatar"
-                              />
-                            </div>
-                          </div>
-                          <div>
-                            <h6 className="mb-1">
-                              Update v2.3 completed successfully
-                            </h6>
-                            <p className="small text-body m-0">
-                              Whats new! Find out about new features
-                            </p>
-                            <small className="text-body">5 min ago</small>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* Button */}
-                  <div className="card-footer bg-transparent border-0 py-3 text-center position-relative">
-                    <a href="#" className="stretched-link">
-                      See all incoming activity
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* Notification dropdown menu END */}
-            </li>
-            {/* Notification dropdown END */}
+           
             {/* Profile dropdown START */}
             <li className="nav-item ms-3 dropdown">
               {/* Avatar */}
@@ -319,7 +68,7 @@ const Header = () => {
               >
                 <img
                   className="avatar-img rounded-circle"
-                  src="assets/images/avatar/01.jpg"
+                  src="/assets/images/avatar/01.jpg"
                   alt="avatar"
                 />
               </a>
@@ -335,13 +84,13 @@ const Header = () => {
                     <div className="avatar me-3">
                       <img
                         className="avatar-img rounded-circle shadow"
-                        src="assets/images/avatar/01.jpg"
+                        src="/assets/images/avatar/01.jpg"
                         alt="avatar"
                       />
                     </div>
                     <div>
                       <a className="h6" href="#">
-                        Lori Ferguson
+                        User Name
                       </a>
                       <p className="small m-0">example@gmail.com</p>
                     </div>
