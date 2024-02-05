@@ -66,7 +66,7 @@ const ViewMentors = () => {
               </div>
               <div className="col-sm-6 col-xl-3 mt-3 mt-xl-0"></div>
               <div className="col-sm-6 col-xl-2 mt-3  d-grid">
-                <a href="#" className="btn btn-lg btn-primary mb-0">
+                <a href="#" className="btn btn-sm btn-primary mb-0">
                   Filter Results
                 </a>
               </div>

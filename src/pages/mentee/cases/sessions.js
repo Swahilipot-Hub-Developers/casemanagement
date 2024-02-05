@@ -1,5 +1,3 @@
-import Mentee from "@/layout/mentee/Mentee";
-
 const Sessions = () => {
   return (
     <>
@@ -20,7 +18,7 @@ const Sessions = () => {
               <div className="col-12">
                 <div className="card bg-transparent card-body pb-0 px-0 mt-2 mt-sm-0">
                   <div className="row d-sm-flex justify-sm-content-between mt-2 mt-md-0">
-                    {/* Avatar */}
+                  
                     <div className="col-auto">
                       <div className="avatar avatar-xxl position-relative mt-n3">
                         <img
@@ -34,7 +32,7 @@ const Sessions = () => {
                       </div>
                     </div>
 
-                    {/* Profile info */}
+                  
                     <div className="col d-sm-flex justify-content-between align-items-center">
                       <div>
                         <h1 className="my-1 fs-4">Lori Stevens</h1>
@@ -42,7 +40,7 @@ const Sessions = () => {
                           <li className="list-inline-item me-3 mb-1 mb-sm-0">
                             <span className="h6">7</span>
                             <span className="text-body fw-light">
-                              Completed courses
+                              Completed Sessions
                             </span>
                           </li>
                           <li className="list-inline-item me-3 mb-1 mb-sm-0">
@@ -53,19 +51,19 @@ const Sessions = () => {
                           </li>
                         </ul>
                       </div>
-                      {/* Button */}
+                     
                       <div className="mt-2 mt-sm-0">
                         <a
-                          href="student-course-list.html"
+                          href="./view"
                           className="btn btn-outline-primary mb-0"
                         >
-                          View my courses
+                          View my Sessions
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
-                {/* Advanced filter responsive toggler START */}
+               
 
                 <hr className="d-xl-none" />
                 <div className="col-12 col-xl-3 d-flex justify-content-between align-items-center">
@@ -82,7 +80,7 @@ const Sessions = () => {
                     <i className="fas fa-sliders-h" />
                   </button>
                 </div>
-                {/* Advanced filter responsive toggler END */}
+               
               </div>
             </div>
           </div>
@@ -90,7 +88,7 @@ const Sessions = () => {
         <section className="pt-0">
           <div className="container">
             <div className="row">
-              {/* Left sidebar START */}
+            
               <div className="col-xl-3">
                 <div
                   className="offcanvas-xl offcanvas-end"
@@ -111,7 +109,60 @@ const Sessions = () => {
                   </div>
 
                   <div className="offcanvas-body p-3 p-xl-0">
-                    <div className="bg-dark border rounded-3 p-3 w-100"></div>
+                    <div className="bg-dark border rounded-3 p-3 w-100">
+                      <div className="list-group list-group-dark list-group-borderless collapse-list">
+                        <a
+                          className="list-group-item"
+                          href="./dashboard"
+                        >
+                          <i className="bi bi-ui-checks-grid fa-fw me-2" />
+                          Dashboard
+                        </a>
+                        
+                        
+                        <a
+                          className="list-group-item"
+                          href="./viewMentors"
+                        >
+                          <i className="far fa-fw fa-file-alt me-2" />
+                          Mentors
+                        </a>
+                        <a
+                          className="list-group-item"
+                          href="instructor-setting.html"
+                        >
+                          <i className="bi bi-gear fa-fw me-2" />
+                          Settings
+                        </a>
+                        <a
+                          className="list-group-item"
+                          href="instructor-delete-account.html"
+                        >
+                          <i className="bi bi-trash fa-fw me-2" />
+                          Delete Session
+                        </a>
+                        <a
+                          className="list-group-item text-danger bg-danger-soft-hover"
+                          href="#"
+                        >
+                          <i className="fas fa-sign-out-alt fa-fw me-2" />
+                          Sign Out
+                        </a>
+                        <ul
+                          className="nav collapse flex-column"
+                          id="collapseauthentication"
+                          data-bs-parent="#navbar-sidebar"
+                        >
+                          
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="offcanvas-body p-3 p-xl-0">
+                   
+
+                    
                   </div>
                 </div>
               </div>
@@ -133,7 +184,7 @@ const Sessions = () => {
                             0
                           </h5>
                         </div>
-                        <p className="mb-0 h6 fw-light">Total Courses</p>
+                        <p className="mb-0 h6 fw-light">Total Sessions</p>
                       </div>
                     </div>
                   </div>
@@ -157,7 +208,7 @@ const Sessions = () => {
                       </div>
                     </div>
                   </div>
-                  {/* Counter item */}
+                  
                   <div className="col-sm-6 col-lg-4 mb-3 mb-lg-0">
                     <div className="d-flex justify-content-center align-items-center p-4 bg-success bg-opacity-10 rounded-3">
                       <span className="display-6 lh-1 text-success mb-0">
@@ -181,9 +232,10 @@ const Sessions = () => {
                     </div>
                   </div>
                 </div>
+
                 <div className="card bg-transparent border rounded-3">
                   <div className="card-header bg-transparent border-bottom">
-                    <h3 className="mb-0">My Courses List</h3>
+                    <h3 className="mb-0">My Sessions</h3>
                   </div>
                   <div className="card-body">
                     <div className="row g-3 align-items-center justify-content-between mb-4">
@@ -203,33 +255,41 @@ const Sessions = () => {
                           </button>
                         </form>
                       </div>
-                      {/* Select option */}
+                     
                       <div className="col-md-3">
-                        {/* Short by filter */}
+                       
                         <form>
                           <select
                             className="form-select js-choice border-0 z-index-9 bg-transparent"
                             aria-label=".form-select-sm"
                           >
                             <option value="">Sort by</option>
-                            <option>Completed</option>
-                            <option>In progress</option>
+                            <option value="Health">Health</option>
+                            <option value="TVET Courses">TVET Courses</option>
+                            <option value="Currently Employed">
+                              Currently employed{" "}
+                            </option>
+                            <option value="Running Business">
+                              Running Business
+                            </option>
+                            <option></option>
                           </select>
                         </form>
                       </div>
                     </div>
-                    <div className="table-responsive border-0">
-                      <table className="table table-dark-gray align-middle p-4 mb-0 table-hover">
-                        <thead>
+
+                    <div className="table-responsive ">
+                      <table className="table table-dark-gray align-middle p-3 mb-0 table-hover ">
+                        <thead className="table-reposnsive">
                           <tr className="table">
                             <th scope="col" class="border-0 rounded-start">
                               Course Title
                             </th>
                             <th scope="col" class="border-0">
-                              Total Lectures
+                              Sessions
                             </th>
                             <th scope="col" class="border-0">
-                              Completed Lecture
+                              Completed
                             </th>
                             <th scope="col" class="border-0 rounded-end">
                               Action
@@ -242,41 +302,13 @@ const Sessions = () => {
                             <td>
                               <div className="d-flex align-items-center">
                                 <div className="w-100px"></div>
-                              </div>
-                            </td>
-
-                            <td>56</td>
-
-                            <td>40</td>
-
-                            <td>
-                              <a
-                                href="#"
-                                className="btn btn-sm btn-primary-soft me-1 mb-1 mb-md-0"
-                              >
-                                <i className="bi bi-play-circle me-1" />
-                                Continue
-                              </a>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td>
-                              <div className="d-flex align-items-center">
-                                <div className="w-100px">
-                                  <img
-                                    src="assets/images/courses/4by3/03.jpg"
-                                    className="rounded"
-                                    alt=""
-                                  />
-                                </div>
                                 <div className="mb-0 ms-2">
                                   <h6>
                                     <a href="#">
                                       Create a Design System in Figma
                                     </a>
                                   </h6>
-                                  {/* Info */}
+                                 
                                   <div className="overflow-hidden">
                                     <h6 className="mb-0 text-end">100%</h6>
                                     <div className="progress progress-sm bg-primary bg-opacity-10">
@@ -297,11 +329,11 @@ const Sessions = () => {
                                 </div>
                               </div>
                             </td>
-                            {/* Table data */}
+                           
                             <td>42</td>
-                            {/* Table data */}
+                           
                             <td>42</td>
-                            {/* Table data */}
+                          
                             <td>
                               <button className="btn btn-sm btn-success me-1 mb-1 mb-x;-0 disabled">
                                 <i className="bi bi-check me-1" />
@@ -313,12 +345,12 @@ const Sessions = () => {
                               </a>
                             </td>
                           </tr>
-                          {/* Table item */}
+                      
                           <tr>
-                            {/* Table data */}
+                           
                             <td>
                               <div className="d-flex align-items-center">
-                                {/* Image */}
+                               
                                 <div className="w-100px">
                                   <img
                                     src="assets/images/courses/4by3/05.jpg"
@@ -327,13 +359,13 @@ const Sessions = () => {
                                   />
                                 </div>
                                 <div className="mb-0 ms-2">
-                                  {/* Title */}
+                                
                                   <h6>
                                     <a href="#">
                                       The Complete Web Development in python
                                     </a>
                                   </h6>
-                                  {/* Info */}
+                                 
                                   <div className="overflow-hidden">
                                     <h6 className="mb-0 text-end">60%</h6>
                                     <div className="progress progress-sm bg-primary bg-opacity-10">
@@ -354,11 +386,11 @@ const Sessions = () => {
                                 </div>
                               </div>
                             </td>
-                            {/* Table data */}
+                          
                             <td>28</td>
-                            {/* Table data */}
+                            
                             <td>12</td>
-                            {/* Table data */}
+                           
                             <td>
                               <a
                                 href="#"
@@ -369,12 +401,12 @@ const Sessions = () => {
                               </a>
                             </td>
                           </tr>
-                          {/* Table item */}
+                         
                           <tr>
-                            {/* Table data */}
+                          
                             <td>
                               <div className="d-flex align-items-center">
-                                {/* Image */}
+                              
                                 <div className="w-100px">
                                   <img
                                     src="assets/images/courses/4by3/01.jpg"
@@ -383,13 +415,13 @@ const Sessions = () => {
                                   />
                                 </div>
                                 <div className="mb-0 ms-2">
-                                  {/* Title */}
+                              
                                   <h6>
                                     <a href="#">
                                       Digital Marketing Masterclass
                                     </a>
                                   </h6>
-                                  {/* Info */}
+                                 
                                   <div className="overflow-hidden">
                                     <h6 className="mb-0 text-end">40%</h6>
                                     <div className="progress progress-sm bg-primary bg-opacity-10">
@@ -410,11 +442,11 @@ const Sessions = () => {
                                 </div>
                               </div>
                             </td>
-                            {/* Table data */}
+                         
                             <td>32</td>
-                            {/* Table data */}
+                         
                             <td>18</td>
-                            {/* Table data */}
+                          
                             <td>
                               <a
                                 href="#"
@@ -428,14 +460,14 @@ const Sessions = () => {
                           <tr>
                             <td>
                               <div className="d-flex align-items-center">
-                                {/* Image */}
+                                
                                 <div className="w-100px"></div>
                                 <div className="mb-0 ms-2">
-                                  {/* Title */}
+                                
                                   <h6>
                                     <a href="#">Graphic Design Masterclass</a>
                                   </h6>
-                                  {/* Info */}
+
                                   <div className="overflow-hidden">
                                     <h6 className="mb-0 text-end">90%</h6>
                                     <div className="progress progress-sm bg-primary bg-opacity-10">
@@ -469,18 +501,12 @@ const Sessions = () => {
                             </td>
                           </tr>
                         </tbody>
-                        {/* Table body END */}
+                      
                       </table>
                     </div>
-                    {/* Course list table END */}
-                    {/* Pagination START */}
+                   
                     <div className="d-sm-flex justify-content-sm-between align-items-sm-center mt-4 mt-sm-3">
-                      {/* Content */}
-                      <p className="mb-0 text-center text-sm-start">
-                        Showing 1 to 8 of 20 entries
-                      </p>
-                      {/* Pagination */}
-                      <nav
+                    <nav
                         className="d-flex justify-content-center mb-0"
                         aria-label="navigation"
                       >
@@ -513,17 +539,16 @@ const Sessions = () => {
                         </ul>
                       </nav>
                     </div>
-                    {/* Pagination END */}
+                   
                   </div>
-                  {/* Card body START */}
+                
                 </div>
-                {/* Main content END */}
+                
               </div>
-              {/* Row END */}
+             
             </div>
           </div>
         </section>
- 
       </main>
 
       <div className="back-top">

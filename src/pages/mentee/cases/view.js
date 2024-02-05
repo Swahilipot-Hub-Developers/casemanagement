@@ -23,10 +23,10 @@ const ActiveCases = () => {
 
         <div>
           <select id="sort">
-            <option value="free">Health</option>
-            <option value="popular">TVET Courses</option>
-            <option value="viewed">Currently employed </option>
-            <option value="newest">Running Business</option>
+            <option value="Health">Health</option>
+            <option value="TVET Courses">TVET Courses</option>
+            <option value="Currently employed">Currently employed </option>
+            <option value="Running business">Running Business</option>
           </select>
           <label htmlFor="sort" className="m-2">
             Sort by
@@ -108,14 +108,41 @@ const ActiveCases = () => {
             </tr>
           </tbody>
         </table>
-        <p>
-          Showing 1 to {cases.length} of {cases.length} entries
-        </p>
-        <div>
-          {Array.from({ length: Math.ceil(cases.length / 3) }, (_, i) => (
-            <span key={i}>{i + 1}</span>
-          ))}
-        </div>
+
+        {/* pagination */}
+
+        <nav
+          className="d-flex justify-content-center mb-0"
+          aria-label="navigation"
+        >
+          <ul className="pagination pagination-sm pagination-primary-soft d-inline-block d-md-flex rounded mb-0">
+            <li className="page-item mb-0">
+              <a className="page-link" href="#" tabIndex={-1}>
+                <i className="fas fa-angle-left" />
+              </a>
+            </li>
+            <li className="page-item mb-0">
+              <a className="page-link" href="#">
+                1
+              </a>
+            </li>
+            <li className="page-item mb-0 active">
+              <a className="page-link" href="#">
+                2
+              </a>
+            </li>
+            <li className="page-item mb-0">
+              <a className="page-link" href="#">
+                3
+              </a>
+            </li>
+            <li className="page-item mb-0">
+              <a className="page-link" href="#">
+                <i className="fas fa-angle-right" />
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </Mentee>
   );
